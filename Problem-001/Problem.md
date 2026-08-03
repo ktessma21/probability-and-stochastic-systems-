@@ -1,0 +1,1 @@
+You have a shuffled deck of 26 red and 26 black cards. You play a game by repeatedly looking at the top card and either discarding it or ending the game. At the end if the color of the next card matches that of the top card you win, otherwise you lose. What is the optimal strategy?
