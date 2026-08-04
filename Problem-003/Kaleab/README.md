@@ -6,7 +6,7 @@ What number should A choose to maximize their expected payoff?
 --- 
 # Solution
 
-**Note: to make my life a little nicer I chose $c$ to be continously uniform from 0 to 100**
+**Note: to make my life a little nicer I chose $c$ to be continously uniform from 0 to 100. I think it shouldn't affect the answer**
 
 Let players $A$, $B$, $C$ pick values $a$, $b$, $c$, with $c \sim \mathrm{Unif}(0, 100)$.
 
