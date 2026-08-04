@@ -29,8 +29,8 @@ $$
 $$
 \begin{aligned}
 E_B(b \mid a)
-  &= P(c > b) \cdot b \;-\; P(c < b) \cdot (a + c) \\[4pt]
-  &= \left(1 - \frac{b}{100}\right) b \;-\; \frac{b}{100}(a + c) \\[4pt]
+  &= P(c > b) \cdot b \;-\; P(c < b) \cdot (a + c) \\
+  &= \left(1 - \frac{b}{100}\right) b \;-\; \frac{b}{100}(a + c) \\
   &= b - \frac{b^2 + ab + bc}{100}
 \end{aligned}
 $$
@@ -68,8 +68,8 @@ $$
 $$
 \begin{aligned}
 E_A(a \mid c) 
-  &= P(a < c) * a - P(a > c) (b + c) \\[4pt]
-  &= \left(1 - \frac{a}{100}\right) * a - \frac{a}{100}(b + c) \\[4pt]
+  &= P(a < c) * a - P(a > c) (b + c) \\
+  &= \left(1 - \frac{a}{100}\right) * a - \frac{a}{100}(b + c) \\
   &= a - \frac{a^2 - ab - ac}{100}
 \end{aligned}
 $$
@@ -79,13 +79,13 @@ Probabilty density function of $c$, $f(c) = \frac{1}{100}$.
 $$
 \begin{aligned}
 E_A(a) 
-  &= E(E_A(a | c)) \\[4pt]
-  &= E\left(a - \frac{a^2 + ab + ac}{100}\right) \\[4pt]
-  &= \int_{0}^{100}{\left(a - \frac{a^2 + ab + ac}{100}\right) * f(c) dc} \\[4pt]
-  &= \frac{1}{100} \left[ac - \frac{a^2c + abc}{100} - \frac{ac^2}{200}\right]_{c=0}^{c=100} \\[4pt]
-  &= \frac{1}{100} \left(100a - \frac{100a^2 + 100ab}{100} - \frac{100a}{2}\right) \\[4pt]
-  &= a - \frac{a^2 + ab}{100} - \frac{a}{2} \\[4pt]
-  &= \frac{a}{2} - \frac{2a^2}{100} \\[4pt]
+  &= E(E_A(a | c)) \\
+  &= E\left(a - \frac{a^2 + ab + ac}{100}\right) \\
+  &= \int_{0}^{100}{\left(a - \frac{a^2 + ab + ac}{100}\right) * f(c) dc} \\
+  &= \frac{1}{100} \left[ac - \frac{a^2c + abc}{100} - \frac{ac^2}{200}\right]_{c=0}^{c=100} \\
+  &= \frac{1}{100} \left(100a - \frac{100a^2 + 100ab}{100} - \frac{100a}{2}\right) \\
+  &= a - \frac{a^2 + ab}{100} - \frac{a}{2} \\
+  &= \frac{a}{2} - \frac{2a^2}{100} \\
 \end{aligned}
 $$
 
