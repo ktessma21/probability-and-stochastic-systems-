@@ -29,11 +29,13 @@ $$
 $$
 \begin{aligned}
 E_B(b \mid a)
-  &= P(c > b) \cdot b \;-\; P(c < b) \cdot (a + c) \\
-  &= \left(1 - \frac{b}{100}\right) b \;-\; \frac{b}{100}(a + c) \\
+  &= P(c > b) \cdot b - P(c < b) \cdot (a + c) \\
+  &= \left(1 - \frac{b}{100}\right) b - \frac{b}{100}(a + c) \\
   &= b - \frac{b^2 + ab + bc}{100}
 \end{aligned}
 $$
+
+N.B: notice $\frac{b^2 + ab + bc}{100}$ is always positive. 
 
 #### Case 2: $b < a$ <sup>3</sup>
 
@@ -55,7 +57,7 @@ $E_A(a)$ is the expected payoff of player A as a function of what it choose give
 
 To simplify this, we need to use a common property that $E_A(a) = E(E_A(a | c)).$ This expression might be a bit confusing. The inner expectation if over values of $a$ given value $c$. And the outer expecetation is over different values of $c$. 
 
-We know $b$ is almost $c$ but a bit lower.
+We know $b$ is almost $c$ but a bit lower. **Kidus's question: I don't get this part because what do you mean b is almost C. B would almost say whatever a says minus one because that's the optimal strategy for B. B would never say less than C.**
 
 $$
 E_A(a \mid c) = P(a < c) * a - P(a > c) (b + c)
@@ -85,7 +87,7 @@ E_A(a)
   &= \frac{1}{100} \left[ac - \frac{a^2c + abc}{100} - \frac{ac^2}{200}\right]_{c=0}^{c=100} \\
   &= \frac{1}{100} \left(100a - \frac{100a^2 + 100ab}{100} - \frac{100a}{2}\right) \\
   &= a - \frac{a^2 + ab}{100} - \frac{a}{2} \\
-  &= \frac{a}{2} - \frac{2a^2}{100} \\
+  &= **\frac{a}{2} - \frac{2a^2}{100} \text{ interestingly the b value doesn't matter}** \\ 
 \end{aligned}
 $$
 
@@ -103,10 +105,21 @@ $$
 <sup>1</sup> I don't know why the problem decided to make $c$ a discrete variable (integer). It would have been much cleaner as a real number from 0 to 100. I don't think it will change the answer much.
 
 <sup>2</sup> This step of splitting into two cases wasn't intuitive for me, and I don't
-quite get it yet. I wonder if it is accurate and it might cause any problems.
+quite get it yet. I wonder if it is accurate and it might cause any problems.  **Kidus's reply** The splitting process is actually very correct and it's very clear. The idea is thinking if B would say the highest number or not. The only way B can say the highest number is if it says a number that's higher than A. But doing that would always makes B to lose this game, so it's never been an optimal choice for B. 
 
 <sup>3</sup> It is not clear who pays whom if there is equality among $a$, $b$, $c$.
 But my logic is that since $a$ and $b$ are continuous values, the probability of that
 happening is $0$.
 
-<sup>4</sup> $b = a - 0.0000000000001$ lol
+<sup>4</sup> $b = a - 0.0000000000001$ lol. **Kidus's reply** Yes, but we can't do that because the prompt only allows each player to choose an integer.
+
+That said, I wonder whether it might actually be better for **B** to choose (b = a) when (a < 50), and choose (b < a) (or simply (b = a - 1)) when (a > 50). The intuition is that player **C** chooses uniformly at random, so (E[C] = 50). Therefore, when (a > 50), it's relatively unlikely that **C** will choose the largest number.
+
+The only issue is that the problem doesn't specify what happens if two or even all three players choose the same number. Who pays in the case of a tie?
+
+It might make the problem more interesting if we added a rule such as:
+
+> If two players tie for the largest number, they each pay half of the third player's share.
+
+What do you think?
+
