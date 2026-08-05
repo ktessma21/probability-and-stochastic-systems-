@@ -102,7 +102,7 @@ $$
 ---
 
 ### Notes
-<sup>1</sup> I don't know why the problem decided to make $c$ a discrete variable (integer). It would have been much cleaner as a real number from 0 to 100. I don't think it will change the answer much.
+<sup>1</sup> I don't know why the problem decided to make $c$ a discrete variable (integer). It would have been much cleaner as a real number from 0 to 100. I don't think it will change the answer much. **kidus's reply** it won't change anything 
 
 <sup>2</sup> This step of splitting into two cases wasn't intuitive for me, and I don't
 quite get it yet. I wonder if it is accurate and it might cause any problems.  **Kidus's reply** The splitting process is actually very correct and it's very clear. The idea is thinking if B would say the highest number or not. The only way B can say the highest number is if it says a number that's higher than A. But doing that would always makes B to lose this game, so it's never been an optimal choice for B. 
