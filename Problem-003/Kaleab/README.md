@@ -111,7 +111,7 @@ quite get it yet. I wonder if it is accurate and it might cause any problems.  *
 But my logic is that since $a$ and $b$ are continuous values, the probability of that
 happening is $0$.
 
-<sup>4</sup> $b = a - 0.0000000000001$ lol. **Kidus's reply** Yes, but we can't do that because the prompt only allows each player to choose an integer.
+<sup>4</sup> $b = a - 0.0000000000001$ lol. **Kidus's reply** 
 
 That said, I wonder whether it might actually be better for **B** to choose (b = a) when (a < 50), and choose (b < a) (or simply (b = a - 1)) when (a > 50). The intuition is that player **C** chooses uniformly at random, so (E[C] = 50). Therefore, when (a > 50), it's relatively unlikely that **C** will choose the largest number.
 
